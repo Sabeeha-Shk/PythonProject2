@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One More Surprise for You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      font-family: 'Open Sans', sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    p.intro {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #fcd1ff;
+    }
+
+    .reveal-btn {
+      background-color: #ff69b4;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+    }
+
+    .reveal-btn:hover {
+      background-color: #ff1493;
+    }
+
+    .letter-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      max-width: 750px;
+      margin-top: 30px;
+      text-align: left;
+      display: none;
+      animation: fadeIn 1s ease-in-out;
+      color: #e0e0e0;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .letter-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #ffb6c1;
+    }
+
+    .letter-box p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .signature {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      text-align: right;
+      color: #ffc0cb;
+    }
+
+    /* Sparkles */
+    .sparkle {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #fff6ff, #ffc0cb, transparent);
+      border-radius: 50%;
+      animation: sparkle 6s linear infinite;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
+    @keyframes sparkle {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>One More Surprise for You 💝</h1>
+  <p class="intro">Click below to reveal a message straight from my heart!</p>
+
+  <button class="reveal-btn" onclick="document.getElementById('letter').style.display='block'">Reveal the Letter 💌</button>
+
+  <div class="letter-box" id="letter">
+    <h3>My Dearest Love,</h3>
+    <p>
+      I know today is meant to be all about your joy — and you truly deserve every bit of it.
+      But before we go any further, I need to share something from deep within me…
+      <br><br>
+      I’m sorry.
+      <br><br>
+      I’m sorry for the moments I let my temper speak louder than my heart.
+      I’m sorry for the times I didn’t listen closely enough, love gently enough, or stand beside you with the understanding you deserved.
+      <br><br>
+      If ever I made you feel alone, unimportant, or unloved — please know that it was never my intention.
+      Those moments haunt me more than you know, because the last thing I ever want is to be the reason behind your pain.
+      <br><br>
+      You are the most precious person in my life. Your love, your patience, and your presence are gifts I never want to take for granted.
+      <br><br>
+      This is not just an apology — it’s a promise.
+      A promise to communicate better, to love deeper, to support you fully, and to grow into the partner you truly deserve.
+      <br><br>
+      I love you — endlessly, honestly, with all that I am.
+      <br><br>
+      Thank you for being you. And thank you… for still holding my hand.
+    </p>
+
+    <p>
+      <br>
+      Your surprise or the best gift is my <strong>LOYALTY</strong>. ❤️
+      <br><br>
+      Just forget all the past things that happened in our life.
+      Let’s begin a new journey filled with lots of <strong>love and happiness</strong>.
+      <br><br>
+      And yes... I have planned something special for you tonight.
+      <br>
+      Be ready for dinner at <strong>7 PM</strong> — the location will be a <em>very special surprise</em>. 🌙✨
+    </p>
+
+    <p class="signature">Forever yours,<br>Sabeeha 💌</p>
+  </div>
+
+  <!-- Sparkle Generator -->
+  <script>
+    const sparkleCount = 60;
+    for (let i = 0; i < sparkleCount; i++) {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle");
+      sparkle.style.left = Math.random() * 100 + "vw";
+      sparkle.style.top = Math.random() * 100 + "vh";
+      sparkle.style.animationDuration = (Math.random() * 5 + 4) + "s";
+      sparkle.style.opacity = Math.random();
+      sparkle.style.transform = `scale(${Math.random()})`;
+      document.body.appendChild(sparkle);
+    }
+  </script>
+</body>
+</html>
